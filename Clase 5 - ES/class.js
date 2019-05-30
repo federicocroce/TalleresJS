@@ -2,30 +2,30 @@
 
 /** Class Person example */
 
-class Person {
-    constructor(name, surname) {
-        this._name = name;
-        this._surname = surname;
-    }
+// class Person {
+//     constructor(name, surname) {
+//         this._name = name;
+//         this._surname = surname;
+//     }
 
-    completeName() {
-        return "Soy: " + this._name + ' ' + this._surname;
-    }
+//     completeName() {
+//         return "Soy: " + this._name + ' ' + this._surname;
+//     }
 
-    get surname() {
-        return this._name;
-    }
+//     get surname() {
+//         return this._name;
+//     }
 
-    set surname(newSurname) {
-        return this._surname = newSurname;
-    }
-};
+//     set surname(newSurname) {
+//         return this._surname = newSurname;
+//     }
+// };
 
-const Fede = new Person("Federico", "Croce");
+// const Fede = new Person("Federico", "Croce");
 
-console.log(Fede.completeName())
-console.log(Fede)
-console.log(Person.prototype.completeName)
+// console.log(Fede.completeName())
+// console.log(Fede)
+// console.log(Person.prototype.completeName)
 
 
 
@@ -56,15 +56,16 @@ class Person {
 };
 
 class User extends Person {
-    constructor(name) {
+    constructor(name, internalID) {
         super(name);
+        this._internalID = internalID;
     }
 }
 
 
 const Fede = new Person("Federico", "Croce");
 
-const Pablo = new User("Pablo");
+const Pablo = new User("Pablo", "A127271");
 Pablo.surname = "Radomski";
 
 
