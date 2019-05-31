@@ -6,9 +6,9 @@ const filterCharacterByName = () => {
     document.getElementById("list").classList.add("hide");
 
     characterName.value ?
-        getCharactersByName(characterName, spinner)
+        getCharactersByName(characterName)
         :
-        getAllCharacters(spinner);
+        getAllCharacters();
 };
 
 const getCharactersByName = characterName => genericGetCharacter(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${characterName.value}&ts=1&apikey=091d092638b3cf6c58f91a07dda476af&hash=0e5da09a03340c876f9348c4409d3aff`);
@@ -70,4 +70,3 @@ const emptyResponseShow = (list, emptyResult) => {
     emptyResult.classList.remove("hide");
     list.classList.add("hide");
 };
-
