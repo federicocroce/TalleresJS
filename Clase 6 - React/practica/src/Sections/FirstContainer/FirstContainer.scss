@@ -1,0 +1,13 @@
+.first-container {
+    padding: 20px;
+    .list-element {
+        &>* {
+            display: inline-block;
+        }
+
+        .remove-element-list {
+            margin-left: 20px;
+            padding: 2px 5px;
+        }
+    }
+}
