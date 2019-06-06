@@ -1,8 +1,9 @@
 import React from "react";
 
 
-const MyComponentMixExport = () => {
-    return <p>MyComponentMixExport</p>
+const MyComponentMixExport = (props) => {
+    console.log(props);
+    return <p>MyComponentMixExport {props.name}</p>
 }
 
 const MyComponentMixExport1 = () => {

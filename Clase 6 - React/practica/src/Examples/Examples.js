@@ -36,6 +36,10 @@ class Examples extends Component {
         /** Forma Incorrecta */
         // this.setState({ showContent: !this.state.showContent })
 
+        /** Forma Corercta pero no óptima */
+        const newShowValue = !this.state.showContent;
+        this.setState({ showContent: newShowValue })
+
         /** Forma Correcta */
         this.setState((state, props) => (
             { showContent: !state.showContent })
@@ -74,7 +78,7 @@ class Examples extends Component {
                 <h1>Ejemplo para recorrer un array</h1>
                 {/*--------------- RECORRER ARRAY ---------------*/}
                 {
-                    this.arrayExample.map(element => <p key={element}>{element}</p>)
+                    this.arrayExample.map((element, index) => <p key={index}>{element}</p>)
                 }
                 {/* ------------------------------------------------------ */}
 
@@ -88,8 +92,10 @@ class Examples extends Component {
 
                 {/*--------------- CAMBIOS DE ESTADOS ---------------*/}
                 <h1>Cambios de estados</h1>
+
                 {this.state.showContent && <p>Se muestra el párrafo</p>}
-                <button onClick={() => { this.toggleStateToShow() }}>Muestra/Oculta</button>
+
+                <button onClick={() => this.toggleStateToShow()}>Muestra/Oculta</button>
 
 
             </div>
