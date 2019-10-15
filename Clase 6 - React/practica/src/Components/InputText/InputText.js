@@ -14,22 +14,23 @@ class InputText extends Component {
         super(props);
 
         this.state ={
-            inputValue: "Fede"
+            value: "" || this.props.value,
         }
     }
 
 
     onChangeValue = (value, name) =>{
+        this.setState({value});
         this.props.onChangeValue && this.props.onChangeValue({ value, name})
     }
 
     render() {
-        const {name, placeholder, value} = this.props;
+        const {name, placeholder} = this.props;
         console.log("Renderiza inputtext")
         return (
             <div>
                 {/* <input type="text" onChange={(e) => this.setState({inputValue: e.target.value})} placeholder={placeholder} value={this.state.value}></input> */}
-                <input type="text" onChange={(e) => this.onChangeValue(e.target.value, name)} placeholder={placeholder} value={value}></input>
+                <input type="text" onChange={(e) => this.onChangeValue(e.target.value, name)} placeholder={placeholder} value={this.state.value}></input>
             </div>
         );
     }

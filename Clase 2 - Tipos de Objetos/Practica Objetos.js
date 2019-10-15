@@ -10,7 +10,7 @@ console.log(obtenerValor(10));
 
 
 
-/** Dado el arreglo primerAray generar una función que retorne el valor del index que recibe por parámetro: */
+/** Dado el arreglo primerAray generar una función que retorne el array concatenado en un solo string: */
 // const generarString = () => primerAray.join(" ");
 console.log(generarString());
 
@@ -68,27 +68,35 @@ console.log(contienenE());
 
 
 
-/** Dado los arreglos a y b unirlos (sin repetición)*/
-const a = [1,2,3];
-const b = [4,3,2];
+/** Dado los arreglos a y b unirlos (sin repetición) (a ∪ b)*/
+const a = [1, 2, 3];
+const b = [4, 3, 2];
 
 let union = new Set([...a, ...b]);
 console.log(union);
 
 
 
-/** Dado los arreglos a y b buscar sus intersecciones*/
-const a = [1,2,3];
-const b = [4,3,2];
+/** Dado los arreglos a y b buscar sus intersecciones (a ∩ b)*/
+const a = [1, 2, 3];
+const b = [4, 3, 2];
 let intersection = a.filter(x => b.indexOf(x) > -1);
 console.log(intersection);
 
 
 
-/** Dado los Set a y b buscar sus intersecciones*/
-let a = new Set([1,2,3]);
-let b = new Set([4,3,2]);
+/** Dado los Set a y b buscar sus intersecciones (a ∩ b)*/
+let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
 
 let intersection = new Set([...a].filter(x => b.has(x)));
 console.log(intersection);
 
+
+/** Dado los Set a y b buscar sus diferencias (a ∩ b)*/
+let a = new Set([1, 2, 3]);
+let b = new Set([4, 3, 2]);
+
+let diferencia = new Set(
+    [...a].filter(x => !b.has(x)));
+console.log(diferencia);
