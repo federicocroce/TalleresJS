@@ -1,3 +1,4 @@
+
 // const fn1 = () => console.log("fn1 se ejecuta dentro de la función 2");
 
 // function fn1Cbk() {
@@ -44,7 +45,10 @@
 
 /**
  * 
-Consigna: Crear una función (obtenerArrayPersonasNombresCompletos) que retorne un arreglo con los nombres completos de cada persona. la función obtenerArrayPersonasCompleta recibe como parámentros el array personas, un callback que obtiene el nombre y otro callback que obtiene el apellido.
+Consigna:
+Primero poner en práctica los conocimientos de tipo de objecto del taller pasado. Crear un array personas con dos objetos que contengan como claves: "nombre", "apellido" y valores su nombre y apellido y mi nombre y apellido.
+
+Crear una función (obtenerArrayPersonasNombresCompletos) que retorne un arreglo con los nombres completos de cada persona. La función obtenerArrayPersonasCompleta recibe como parámentros el array personas, un callback que obtiene el nombre y otro callback que obtiene el apellido.
 
 EJ: obtenerArrayPersonasNombresCompletos(personas, obtenerNombre, obtenerApellido)  // [ 'Federico Croce', 'Pablo Radomski' ]
  */
@@ -69,47 +73,25 @@ function obtenerApellido(personaParam) {
     return personaParam.apellido
 }
 
-function obtenerArrayPersonasNombresCompletos(arrayPersonas, cbObtenerNombre, cbObtenerApellido) {
-    // let newArray = [];
-    return arrayPersonas.map(function (persona) {
-        return cbObtenerNombre(persona) + " " + cbObtenerApellido(persona)
-    })
-    // return newArray;
-}
+// function obtenerArrayPersonasNombresCompletos(arrayPersonas, cbObtenerNombre, cbObtenerApellido) {
+//     return arrayPersonas.map(function (persona) {
+//         return cbObtenerNombre(persona) + " " + cbObtenerApellido(persona)
+//     });
+// }
 
 
-const  obtenerArrayPersonasNombresCompletos = (arrayPersonas, cbObtenerNombre, cbObtenerApellido) => 
-arrayPersonas.map((persona) => cbObtenerNombre(persona) + " " + cbObtenerApellido(persona))
+const  obtenerArrayPersonasNombresCompletos = (arrayPersonas, cbObtenerNombre, cbObtenerApellido) => arrayPersonas.map(persona => cbObtenerNombre(persona) + " " + cbObtenerApellido(persona))
 
 
 
 const resultado = obtenerArrayPersonasNombresCompletos(personas, obtenerNombre, obtenerApellido);
 
+console.log(resultado)
 
-// console.log(resultado.join(" - "));
-
-
-
-/** Una vez creado el arreglo personas:
- *
-  const personas = [
-    {
-        nombre: "Federico",
-        apellido: "Croce"
-    },
-    {
-        nombre: "Pablo",
-        apellido: "Radomski"
-    }
-];
-
-
-
-*/
 
 /************************************************************************************************** */
 
-/** CLOUSURES */
+/** CLOSURES */
 
 // const personas = [
 //     {
@@ -122,7 +104,7 @@ const resultado = obtenerArrayPersonasNombresCompletos(personas, obtenerNombre, 
 //     }
 // ];
 
-// function obtenerValorClousure(key) {
+// function obtenerValorClosure(key) {
 //     return function (obj) {
 //         return obj[key]
 //     }
@@ -138,11 +120,11 @@ const resultado = obtenerArrayPersonasNombresCompletos(personas, obtenerNombre, 
 // };
 
 
-// console.log(obtenerPersonaCompleta(personas, obtenerValorClousure('nombre'), obtenerValorClousure('apellido')));
+// console.log(obtenerPersonaCompleta(personas, obtenerValorClosure('nombre'), obtenerValorClosure('apellido')));
 
 
 
-// const arrayPers = obtenerPersonaCompleta(personas, obtenerValorClousure('nombre'), obtenerValorClousure('apellido'))
+// const arrayPers = obtenerPersonaCompleta(personas, obtenerValorClosure('nombre'), obtenerValorClosure('apellido'))
 // console.log(arrayPers.join(" - "))
 
 
@@ -152,13 +134,13 @@ const resultado = obtenerArrayPersonasNombresCompletos(personas, obtenerNombre, 
 
 
 
-function test(time) {
-    setTimeout(function(){
-        console.log("Fede")
-    }, time)
-}
+// function test(time) {
+//     setTimeout(function(){
+//         console.log("Fede")
+//     }, time)
+// }
 
 
-console.log("Antes de llamar")
-test(3000)
-console.log("Luego de llamar")
+// console.log("Antes de llamar")
+// test(3000)
+// console.log("Luego de llamar")

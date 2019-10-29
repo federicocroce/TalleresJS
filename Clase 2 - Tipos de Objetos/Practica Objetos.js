@@ -62,7 +62,7 @@ console.log(eliminarRepeticiones());
 /** Dado el arreglo diasArray generar una función que retorne los dias que contienen la letra e */
 const diasArray = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
 
-// const contienenE = () => diasArray.filter(str => str.includes("e"));
+const contienenE = () => diasArray.filter(str => str.includes("e"));
 console.log(contienenE());
 
 

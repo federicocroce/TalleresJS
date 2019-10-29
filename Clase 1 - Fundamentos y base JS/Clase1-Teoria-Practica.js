@@ -36,12 +36,12 @@ fnTest();
 
 
 
-(function algo (str) {
-    console.log(str)
-})("Auto");
+// ((str) {
+//     console.log(str)
+// })("Auto");
 
 
-( str => console.log(str))("Fede"); 
+// ( str => console.log(str))("Fede"); 
 
 
 /** */
@@ -61,7 +61,6 @@ const testIfTernario = testIf ? "testIfTernario" : "testIfTernario es falso";
 console.log(testIfTernario);
 
 testIf && console.log("testIf simple");
-
 
 const testVariable = testIf || "Esto es falso";
 

@@ -86,10 +86,6 @@ console.log(resultadoF)
 let resultadoP = 0;
 
 const sumarP = (res, value) =>  res += value;
-
-function sumarFP(res, value){
-   return res += value;
-}
 const restarP = (res, value) => res -= value;
 const dividirP = (res, value) => res /= value;
 const multiplicarP = (res, value) => res *= value;
@@ -111,10 +107,9 @@ console.log(resultadoP);
 // ej: El número 0 es par
 //     El número 1 es impar
 
-let resultadoFor = 0;
 
 for (let index = 0; index < 11; index++) {
-    const indexStr = "El número " + index;
+    const indexStr = "El número actual " + index;
     index % 2 == 0 ? console.log(indexStr + " es par") :  console.log(indexStr + " es impar") 
 }
 
@@ -160,3 +155,4 @@ const fn = value => {
 console.log(fn(1));
 console.log(fn(4));
 console.log(fn(-2));
+
