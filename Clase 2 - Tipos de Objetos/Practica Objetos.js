@@ -80,7 +80,7 @@ console.log(union);
 /** Dado los arreglos a y b buscar sus intersecciones (a ∩ b)*/
 const a = [1, 2, 3];
 const b = [4, 3, 2];
-let intersection = a.filter(x => b.indexOf(x) > -1);
+let intersection = a.filter(x => b.includes(x));
 console.log(intersection);
 
 
